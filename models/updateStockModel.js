@@ -1,10 +1,11 @@
 const mysql = require('mysql');
+const db_info = require('../config.json');
 
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '1717',
-    database: 'test'
+    host: db_info.host,
+    user: db_info.user,
+    password: db_info.password,
+    database: db_info.database
 });
 /**
  * 기존 기업 정보를 수정하는 함수
